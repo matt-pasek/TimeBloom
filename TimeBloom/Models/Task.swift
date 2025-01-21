@@ -13,6 +13,9 @@ final class Task {
     var startedAt: Date?
     var completedAt: Date?
     
+    @Relationship(deleteRule: .cascade) var subtasks: [SubTask]
+    @Relationship(inverse: \Category.tasks) var category: Category?
+    
     init(
         title: String,
         desc: String = "",
@@ -28,6 +31,7 @@ final class Task {
         self.isCompleted = isCompleted
         self.plantStage = plantStage
         self.createdAt = Date()
+        self.subtasks = []
     }
     
     var progress: Double {

@@ -7,9 +7,12 @@ final class Category {
     var colorHex: String
     var createdAt: Date
     
+    @Relationship(deleteRule: .cascade) var tasks: [Task]
+    
     init(name: String, colorHex: String = "#FF0000") {
         self.name = name
         self.colorHex = colorHex
         self.createdAt = Date()
+        self.tasks = []
     }
 }
