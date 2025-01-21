@@ -1,10 +1,3 @@
-//
-//  TimeBloomApp.swift
-//  TimeBloom
-//
-//  Created by Mateusz Pasek on 21/01/2025.
-//
-
 import SwiftUI
 import SwiftData
 
